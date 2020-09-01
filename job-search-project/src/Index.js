@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from './App';
-import "materialize-css/dist/css/materialize.min.css"
-import serviceWorker from './serviceWorker';
+import "materialize-css";
+import "react-materialize"
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
