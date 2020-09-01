@@ -1,39 +1,63 @@
 import React from 'react';
-import {Parallax, Row, Container, Section} from 'react-materialize';
+import { Parallax, Row, Container, Section, Navbar, NavItem, Icon } from 'react-materialize';
+import image1 from "../assets/airport.png"
 import 'materialize-css';
 
 
+//think of making 3 seperate parallax components
 
 
 
 const Layout = () => {
-    return (
-      <Row>
+
+
+  return (
+    
+    <Row>
       <Parallax
-        image={<img alt="" src="http://materializecss.com/images/parallax1.jpg"/>}
+        image={<img alt="" src={image1} />}
         options={{
-        responsiveThreshold: 0
+          responsiveThreshold: 0
         }}
       />
       <Section className="section white">
         <Container>
-          <h2 className="header">
-            Parallax
-          </h2>
-          <p className="grey-text text-darken-3 lighten-3">
-            Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.
-          </p>
+          <Navbar
+            alignLinks="right"
+            brand={<p>Logo</p>}
+            id="mobile-nav"
+            menuIcon={<Icon>menu</Icon>}
+            options={{
+              draggable: true,
+              edge: 'left',
+              inDuration: 250,
+              onCloseEnd: null,
+              onCloseStart: null,
+              onOpenEnd: null,
+              onOpenStart: null,
+              outDuration: 200,
+              preventScrolling: true
+            }}
+            search
+          >
+            <NavItem href="">
+              Getting started
+            </NavItem>
+            <NavItem href="components.html">
+              Components
+            </NavItem>
+          </Navbar>
         </Container>
       </Section>
       <Parallax
-        image={<img alt="" src="http://materializecss.com/images/parallax2.jpg"/>}
+        image={<img alt="" src="http://materializecss.com/images/parallax2.jpg" />}
         options={{
           responsiveThreshold: 0
         }}
       />
     </Row>
-      
-    );
+        
+  );
 };
 
 export default Layout;
