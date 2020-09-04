@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax, Row, Container, Section, Navbar, NavItem, Icon } from 'react-materialize';
+import { Parallax, Row, Container, Section, Button, TextInput } from 'react-materialize';
 import image1 from "../assets/airport.png"
 import 'materialize-css';
 
@@ -12,51 +12,34 @@ const Layout = () => {
 
 
   return (
-    
-    <Row>
+
+    <div>
       <Parallax
         image={<img alt="" src={image1} />}
         options={{
           responsiveThreshold: 0
         }}
       />
-      <Section className="section white">
-        <Container>
-          <Navbar
-            alignLinks="right"
-            brand={<p>Logo</p>}
-            id="mobile-nav"
-            menuIcon={<Icon>menu</Icon>}
-            options={{
-              draggable: true,
-              edge: 'left',
-              inDuration: 250,
-              onCloseEnd: null,
-              onCloseStart: null,
-              onOpenEnd: null,
-              onOpenStart: null,
-              outDuration: 200,
-              preventScrolling: true
-            }}
-            search
-          >
-            <NavItem href="">
-              Getting started
-            </NavItem>
-            <NavItem href="components.html">
-              Components
-            </NavItem>
-          </Navbar>
-        </Container>
-      </Section>
+      <Container className=" content-center white">
+        <Row className="center-align">
+          <h2 className="center-text">Testing</h2>
+          <Row>
+            <TextInput id="TextInput-12" className="center" l={12}
+              m={12}
+              s={12}
+              xl={12} placeholder="Enter airport city"/>
+          </Row>
+        </Row>
+      </Container>
+
       <Parallax
         image={<img alt="" src="http://materializecss.com/images/parallax2.jpg" />}
         options={{
           responsiveThreshold: 0
         }}
       />
-    </Row>
-        
+    </div>
+
   );
 };
 

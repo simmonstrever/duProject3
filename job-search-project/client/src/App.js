@@ -15,6 +15,7 @@ import {loadUser} from "./actions/auth"
 import setAuthToken from "./utils/setAuthToken"
 
 import "./App.css"
+import { Parallax } from 'materialize-css';
 
 if(localStorage.token) {
     setAuthToken(localStorage.token)
@@ -33,7 +34,7 @@ const App = () => {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login}/>
                 </Switch>
-                </Fragment>
+            </Fragment>
         </Router>
         </Provider>
     );
