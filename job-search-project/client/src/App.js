@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 // import { Col } from 'react-materialize';
 // import { Wrapper } from "./styles";
-// import Layout from "./components/Parallax"
+import Layout from "./components/Parallax"
 import Register from "./components/auth/Register"
 import Login from "./components/auth/Login"
 
@@ -13,6 +13,7 @@ import {loadUser} from "./actions/auth"
 import setAuthToken from "./utils/setAuthToken"
 
 import "./App.css"
+import { Parallax } from 'materialize-css';
 
 if(localStorage.token) {
     setAuthToken(localStorage.token)
@@ -30,7 +31,7 @@ const App = () => {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login}/>
                 </Switch>
-                </Fragment>
+            </Fragment>
         </Router>
         </Provider>
     );
