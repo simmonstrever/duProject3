@@ -3,8 +3,10 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 // import { Col } from 'react-materialize';
 // import { Wrapper } from "./styles";
 // import Layout from "./components/Parallax"
+import Landing from "./components/layouts/Landing"
 import Register from "./components/auth/Register"
 import Login from "./components/auth/Login"
+
 
 //redux
 import {Provider} from "react-redux"
@@ -27,6 +29,7 @@ const App = () => {
         <Router>
             <Fragment>
                 <Switch>
+                    <Route exact path="/" component={Landing}/>
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login}/>
                 </Switch>

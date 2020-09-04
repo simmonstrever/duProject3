@@ -16,6 +16,7 @@ app.get("/", (req, res) => res.send("working?"))
 //define the routes
 app.use('/api/users', require("./routes/users"))
 app.use('/api/auth', require("./routes/auth"))
+app.use("/api/airport", require("./routes/airport"))
 
 //Get the port number
 const PORT = process.env.PORT || 5000;
