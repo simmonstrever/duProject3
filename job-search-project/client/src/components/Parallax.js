@@ -1,15 +1,22 @@
 import React from 'react';
-import { Parallax, Row, Container, Section, Button, TextInput } from 'react-materialize';
-import image1 from "../assets/airport.png"
 import 'materialize-css';
+import { Parallax, Row, Container,  Button, TextInput} from 'react-materialize';
+import MySearch from './MySearch';
+import image1 from "../assets/airport.png"
+
 
 
 //think of making 3 seperate parallax components
 
 
 
-const Layout = () => {
+const Layout = ({ searchTerm, handleInputSubmit, handleInputChange}) => {
 
+ 
+
+
+
+ 
 
   return (
 
@@ -23,13 +30,11 @@ const Layout = () => {
       <Container className=" content-center white">
         <Row className="center-align">
           <h2 className="center-text">Testing</h2>
-          <Row>
-            <TextInput id="TextInput-12" className="center" l={12}
-              m={12}
-              s={12}
-              xl={12} placeholder="Enter airport city"/>
           </Row>
-        </Row>
+
+          
+          
+        
       </Container>
 
       <Parallax

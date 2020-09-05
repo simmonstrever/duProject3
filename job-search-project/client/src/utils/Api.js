@@ -1,6 +1,5 @@
 import axios from "axios";
 const googleKey = process.env.REACT_APP_GOOGLE_KEY;
-const weatherbitKey = process.env.REACT_APP_WEATHER_KEY;
 
 export default {
     getWeather: function(location) {
